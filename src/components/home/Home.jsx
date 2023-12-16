@@ -13,13 +13,11 @@ import { useEffect } from "react";
 // Store data to the redux--
 import { allProductSuccess } from "../../reducers/products/productsReducer";
 import { getAllProducts } from "../../actions/productActions/productActions";
-import { loginSuccess, signoutSuccess } from "../../reducers/user/userReducer";
 // Images--
 import bannerShow from "../../img/banner/banner-img.png";
 // MUI Icons--
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { features, brands } from "../data/data";
-import { backendUrl } from "../../helper";
 const Home = () => {
   // All variables are here--
   const { products } = useSelector((state) => state.productReducer);
@@ -40,21 +38,6 @@ const Home = () => {
       })
     );
   }, [dispatch, data]);
-  // fetching profile data--
-  useEffect(() => {
-    const fetchHandler = async () => {
-      const response = await fetch(`${backendUrl}/api/v1/me`, {
-        credentials: "include",
-      });
-      const data = await response.json();
-      if (response.ok) {
-        dispatch(loginSuccess(data?.user));
-      } else {
-        dispatch(signoutSuccess());
-      }
-    };
-    fetchHandler();
-  }, [dispatch]);
 
   return (
     <>
