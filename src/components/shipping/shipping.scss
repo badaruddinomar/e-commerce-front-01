@@ -1,0 +1,34 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.shipping-page {
+  width: 100%;
+  margin-bottom: 100px;
+  @include flex-col;
+  // banner--
+  .shipping-banner {
+    @include common-banner;
+  }
+  // container--
+  .shipping-container {
+    width: 100%;
+    margin: 100px 0;
+    padding: 0 2rem;
+    @include flex-col;
+
+    .shipping-form {
+      width: 100%;
+      @include form-style;
+      @include flex-col;
+      margin: 100px 20px;
+      margin-bottom: 0.5rem;
+    }
+  }
+  // stepper component
+  .stepper {
+    font-size: 2rem;
+    .icon {
+      font-size: 2rem;
+    }
+  }
+}

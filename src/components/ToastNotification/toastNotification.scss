@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.toast {
+  z-index: 10000;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  padding: 1.5rem 2rem;
+  background: $color-light;
+  box-shadow: $shadow;
+  min-width: 270px;
+  transition: all 0.23s ease-in-out;
+  transform: translateX(100%);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  @include flex-row;
+  text-align: center;
+  .icon {
+    font-size: 1.7rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  p {
+    font-family: $font-primary;
+    font-size: 1.7rem;
+    text-transform: lowercase;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+  }
+  &.success {
+    transition: all 0.23s;
+    transform: translateX(0);
+
+    p {
+      color: green;
+    }
+  }
+  &.error {
+    transition: all 0.23s;
+    transform: translateX(0);
+    p {
+      color: tomato;
+    }
+  }
+}

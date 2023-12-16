@@ -1,0 +1,62 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.single-order-page {
+  width: 100%;
+  margin-bottom: 100px;
+  @include flex-center;
+
+  // banner styling--
+  .single-order-banner {
+    @include common-banner;
+  }
+  // conainer styling--
+  .single-order-container {
+    width: 1300px;
+    padding: 50px 0;
+    // shipping info styling--
+    .shipping-info {
+      h3 {
+        font-size: 3rem;
+        font-family: $font-secondary;
+        text-transform: capitalize;
+        margin: 1rem 0;
+      }
+      p {
+        font-size: 1.8rem;
+        font-family: $font-primary;
+        margin: 0.8rem 0;
+      }
+    }
+
+    // order items info styling--
+    .order-items {
+      h3 {
+        font-size: 3rem;
+        font-family: $font-secondary;
+        text-transform: capitalize;
+        margin: 1rem 0;
+        margin-top: 4rem;
+      }
+      .table-container {
+        @include table-container;
+        margin: 20px 0;
+      }
+    }
+    // order summery info styling--
+    .order-summery {
+      h3 {
+        font-size: 3rem;
+        font-family: $font-secondary;
+        text-transform: capitalize;
+        margin: 1rem 0;
+        margin-top: 4rem;
+      }
+      p {
+        font-size: 1.8rem;
+        font-family: $font-primary;
+        margin: 0.8rem 0;
+      }
+    }
+  }
+}

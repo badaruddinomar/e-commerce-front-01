@@ -1,0 +1,72 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.menubar {
+  width: 320px;
+  background: #fff;
+  max-width: 320px;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.23s;
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: visible;
+  z-index: 100000;
+  @include flex-col;
+  .close-icon {
+    cursor: pointer;
+    font-size: 3rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    transition: all 0.23s;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  ul {
+    @include flex-col;
+
+    li {
+      margin: 2rem 0;
+      transition: all 0.23s;
+      position: relative;
+      @include flex-row;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      a {
+        color: $text-dark;
+        font-family: $font-secondary;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 26px;
+        transition: all 0.23s;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      .icon {
+        cursor: pointer;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.menu-active {
+  transition: all 0.5s;
+  transform: translateX(0%);
+}

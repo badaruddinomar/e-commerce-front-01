@@ -1,0 +1,150 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+footer {
+  width: 100%;
+  overflow-x: hidden;
+  background: #222222;
+  @include flex-col;
+  padding: 50px 20px;
+  // Container --
+  .footer-container {
+    width: 100%;
+    padding: 50px 10rem;
+    @include flex-between;
+    flex-wrap: wrap;
+    @include phoneMedia {
+      padding: 50px 20px;
+      @include flex-col;
+    }
+
+    // footer div one--
+    .footer-div-1 {
+      .logo {
+        margin-bottom: 1rem;
+      }
+      h4,
+      h5 {
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: $font-primary;
+        margin: 1rem 0;
+        color: $primary-color;
+      }
+      address,
+      p {
+        font-size: 1.4rem;
+        font-family: $font-primary;
+        font-style: normal;
+        margin: 0.5rem 0;
+        color: $text-white;
+      }
+      .social-links {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .icon {
+          margin-top: 1rem;
+          color: $text-white;
+          margin-right: 1rem;
+          font-size: 2rem;
+          display: inline-block;
+          transition: all 0.23s;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+      @include phoneMedia {
+        align-self: flex-start;
+      }
+    }
+    // Footer div two--
+    .footer-div-2 {
+      h4 {
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: $font-primary;
+        margin: 1rem 0;
+        color: $primary-color;
+      }
+      .link {
+        display: inline-block;
+        font-size: 1.4rem;
+        font-family: $font-primary;
+        font-style: normal;
+        margin: 0.5rem 0;
+        color: $text-white;
+        transition: all 0.23s;
+        padding-bottom: 5px;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+      @include phoneMedia {
+        align-self: flex-start;
+      }
+    }
+    // footer div three--
+    .footer-div-3 {
+      h4 {
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: $font-primary;
+        margin: 1rem 0;
+        color: $primary-color;
+      }
+      .link {
+        display: inline-block;
+        font-size: 1.4rem;
+        font-family: $font-primary;
+        font-style: normal;
+        margin: 0.5rem 0;
+        color: $text-white;
+        transition: all 0.23s;
+        padding-bottom: 5px;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+      @include phoneMedia {
+        align-self: flex-start;
+      }
+    }
+    // footer div four--
+    .footer-div-4 {
+      h4 {
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: $font-primary;
+        margin: 1rem 0;
+        color: $primary-color;
+      }
+      p {
+        font-size: 1.4rem;
+        font-family: $font-primary;
+        font-style: normal;
+        margin: 1.5rem 0;
+        color: $text-white;
+        transition: all 0.23s;
+        padding-bottom: 0.5px;
+      }
+      img {
+        border: 1px solid $primary-color;
+        margin: 0.5rem 1rem;
+        margin-left: 0;
+        cursor: pointer;
+      }
+      .payment {
+        border: none;
+      }
+      @include phoneMedia {
+        align-self: flex-start;
+      }
+    }
+  }
+}

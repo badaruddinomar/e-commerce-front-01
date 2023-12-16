@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.dashboard-page {
+  width: 100%;
+  margin-bottom: 100px;
+  overflow-x: hidden;
+  // Sidebar Styling--
+  .dashboard-sidebar {
+    position: relative;
+    z-index: 10000;
+  }
+  // Banner Styling--
+  .dashboard-banner {
+    @include common-banner;
+  }
+  // Container Styling--
+  .dashboard-container {
+    width: 100%;
+    margin: 150px auto;
+    @include flex-col;
+    .line-chart {
+      width: 700px;
+      margin: 50px auto;
+      @include phoneMedia {
+        width: 100%;
+      }
+      .chart {
+        width: 100%;
+      }
+    }
+    .doughnut-chart {
+      width: 700px;
+      height: 700px;
+      margin: 50px auto;
+      @include phoneMedia {
+        width: 100%;
+      }
+      .chart {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

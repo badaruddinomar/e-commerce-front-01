@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.admin-products-page {
+  width: 100%;
+  // Banner Styling--
+  .admin-products-banner {
+    @include common-banner;
+  }
+  // Container Styling--
+  .all-products-container {
+    margin: 100px 0;
+    width: 100%;
+    padding: 0 2rem;
+    .table-container {
+      @include table-container;
+      margin-bottom: 0px;
+      table {
+        margin: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.product-cart-page {
+  width: 100%;
+  margin-bottom: 100px;
+  // banner styling--
+  .product-cart-banner {
+    @include common-banner;
+  }
+  // container--
+  .product-cart-container {
+    width: 100%;
+    padding: 0 2rem;
+    margin: 30px 0;
+    .table-container {
+      @include table-container;
+      margin-bottom: 0px;
+      table {
+        margin: auto;
+      }
+    }
+  }
+  // cart total--
+  .proceed {
+    @include flex-col;
+    align-self: flex-end;
+    .cart-total-price {
+      border-top: 2px solid $primary-color;
+      padding: 1rem 0;
+      @include flex-center;
+      p {
+        font-size: 2rem;
+        font-family: $font-primary;
+        margin: 0 2rem;
+      }
+    }
+    .btn {
+      border: none;
+      outline: none;
+      background: linear-gradient($primary-color, $secondary-color);
+      font-size: 2rem;
+      padding: 1.5rem 2rem;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+      margin: 2rem 0;
+      transition: all 0.23s;
+      &:hover {
+        background: linear-gradient($secondary-color, $primary-color);
+        opacity: 0.7;
+      }
+    }
+  }
+}

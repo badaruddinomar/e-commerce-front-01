@@ -1,0 +1,156 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.profile-page {
+  width: 100%;
+  margin-bottom: 100px;
+  @include flex-center;
+  // banner styling--
+  .profile-page-banner {
+    @include common-banner;
+  }
+  // conainer styling--
+  .profile-page-container {
+    width: 100%;
+    position: relative;
+
+    // confirm order icon styling--
+    .order-confirm-icon {
+      position: absolute;
+      top: 5rem;
+      left: 20%;
+      font-size: 3rem;
+      background: linear-gradient($primary-color, $secondary-color);
+      border-radius: 50%;
+      color: $text-white;
+      width: 60px;
+      height: 60px;
+      padding: 1rem;
+      cursor: pointer;
+      @include smallMedia {
+        left: 10%;
+      }
+      &:hover {
+        background: linear-gradient($secondary-color, $primary-color);
+        opacity: 0.7;
+      }
+    }
+    // dashboard icon styling--
+    .dashboard-link {
+      position: absolute;
+      top: 5rem;
+      right: 20%;
+      @include smallMedia {
+        right: 10%;
+      }
+      p {
+        color: $text-white;
+        font-size: 2rem;
+        position: absolute;
+        top: -2rem;
+        left: -1rem;
+        background: red;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        line-height: 30px;
+        font-weight: bold;
+        font-family: $font-primary;
+      }
+      .dashboard-icon {
+        font-size: 3rem;
+        background: linear-gradient($primary-color, $secondary-color);
+        border-radius: 50%;
+        color: $text-white;
+        width: 60px;
+        height: 60px;
+        padding: 1rem;
+        cursor: pointer;
+        &:hover {
+          background: linear-gradient($secondary-color, $primary-color);
+          opacity: 0.7;
+        }
+      }
+    }
+    // profile form conainer --
+    .profile-form-container {
+      width: 100%;
+      @include flex-center;
+      .profile-form {
+        width: 100%;
+        @include form-style;
+        @include flex-col;
+        margin: 100px 20px;
+        margin-bottom: 0.5rem;
+
+        .image-div {
+          position: relative;
+          @include flex-col;
+
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.23s;
+          }
+          .file-input {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 35.3%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+          }
+          .camera-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: all 0.5s;
+            font-size: 2rem;
+          }
+          &:hover .camera-icon {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+      // account delete div--
+      .account-delete {
+        width: 500px;
+
+        @include flex-between;
+        @include smallMedia {
+          width: 100%;
+          padding: 0 2rem;
+        }
+        .btn {
+          border: none;
+          outline: none;
+          cursor: pointer;
+          background-color: transparent;
+          font-size: 1.7rem;
+          font-family: $font-secondary;
+          border-bottom: 1px solid $primary-color;
+          padding-bottom: 5px;
+          transition: all 0.23s;
+          text-decoration: none;
+          color: $text-dark;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

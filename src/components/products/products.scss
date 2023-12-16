@@ -1,0 +1,172 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.products-section {
+  width: 100%;
+  position: relative;
+
+  .prducts-banner {
+    @include common-banner;
+  }
+  // products container--
+  .products-container {
+    width: 100%;
+    max-height: auto;
+    position: relative;
+    transition: all 0.23s;
+
+    .products {
+      width: 100%;
+      @include flex-center;
+      margin-bottom: 100px;
+      margin-top: 120px;
+      transition: all 0.23s;
+    }
+    // filter sidebar--
+    .filter-sidebar {
+      width: 320px;
+      background: white;
+      transition: all 0.5s;
+      max-height: auto;
+      z-index: 1000;
+      position: absolute;
+      top: -14vh;
+      left: 0;
+      padding: 2rem;
+      transition: all 0.23s linear;
+      box-shadow: $shadow;
+      @include smallMedia {
+        width: 90%;
+      }
+
+      .filter-active {
+        height: auto;
+        max-height: auto;
+        overflow-y: auto;
+      }
+      .hide {
+        display: none;
+      }
+
+      .filter-top {
+        @include flex-between;
+        h5 {
+          font-size: 2rem;
+          font-family: $font-secondary;
+        }
+        .icon {
+          font-size: 3rem;
+          cursor: pointer;
+        }
+      }
+      // filter by catergory box--
+      .categoryBox {
+        max-height: 400px;
+        overflow-y: auto;
+        h5 {
+          font-size: 2rem;
+          font-family: $font-secondary;
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+        }
+        .category {
+          font-size: 1.6rem;
+          margin: 1rem 0;
+          cursor: pointer;
+          transition: all 0.23s;
+          margin-left: 1rem;
+          font-family: $font-primary;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      // filter by price --
+      .filter-price {
+        h5 {
+          font-size: 2rem;
+          font-family: $font-secondary;
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+        }
+        .filter-input {
+          @include flex-center;
+        }
+        input {
+          // border: none;
+          width: 100px;
+          margin-right: 0.5rem;
+          outline: none;
+          font-size: 1.6rem;
+          padding: 0.5rem;
+          font-family: $font-primary;
+        }
+        button {
+          font-size: 1.6rem;
+          border: none;
+          outline: none;
+          font-family: $font-primary;
+          cursor: pointer;
+          background: $primary-color;
+          padding: 0.5rem;
+          color: $text-white;
+          border-radius: 2px;
+        }
+      }
+      // filter by price--
+      .filter-by-ratings {
+        h5 {
+          font-size: 2rem;
+          font-family: $font-secondary;
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+        }
+        .slider {
+          margin-left: 1.5rem;
+          width: 80%;
+        }
+      }
+    }
+
+    .empty-products-message {
+      font-size: 4rem;
+      color: $primary-color;
+      margin: 100px 0;
+      font-family: $font-secondary;
+      font-weight: bold;
+    }
+  }
+  // pagination box--
+  .pagination-box {
+    margin: 2rem 0;
+
+    .pagination {
+      @include flex-center;
+      transition: all 0.23s;
+      .page-item {
+        padding: 1rem 1.5rem;
+        border: 1px solid $primary-color;
+        margin: 2rem 0;
+        cursor: pointer;
+        border-right: none;
+        &:last-child {
+          border: 1px solid $primary-color;
+        }
+        a {
+          font-size: 1.6rem;
+          font-family: $font-secondary;
+          font-weight: bold;
+          color: black;
+        }
+      }
+      .pageItemActive {
+        background: $primary-color;
+        transition: all 0.23s;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}

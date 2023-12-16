@@ -1,0 +1,103 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.contact-page {
+  width: 100%;
+  margin-bottom: 100px;
+  @include flex-center;
+  @include phoneMedia {
+    margin-bottom: 0;
+  }
+  // Banner Styling--
+  .contact-banner {
+    @include common-banner;
+  }
+  // Container Styling--
+  .contact-container {
+    width: 100%;
+    padding: $section-lr-padding;
+    @include flex-between;
+    @include phoneMedia {
+      @include flex-col;
+      align-items: flex-start;
+      padding: 50px 20px;
+    }
+    // Contact Address Info Styling--
+    .contact-address {
+      address {
+        @include flex-center;
+        margin-bottom: 2rem;
+        .icon {
+          font-size: 3rem;
+          color: $primary-color;
+          margin-right: 1rem;
+          align-self: flex-start;
+        }
+        p {
+          font-size: 2rem;
+          font-style: normal;
+          font-weight: bold;
+          font-family: $font-secondary;
+          line-height: 1.3;
+          span {
+            color: gray;
+            font-weight: 400;
+            font-size: 1.6rem;
+          }
+        }
+      }
+      .phone {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        .icon {
+          font-size: 3rem;
+          color: $primary-color;
+          margin-right: 1rem;
+          align-self: flex-start;
+        }
+        p {
+          font-size: 2rem;
+          font-weight: bold;
+          font-family: $font-secondary;
+          line-height: 1.3;
+          span {
+            color: gray;
+            font-weight: 400;
+            font-size: 1.6rem;
+          }
+        }
+      }
+      .mail {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        .icon {
+          font-size: 3rem;
+          color: $primary-color;
+          margin-right: 1rem;
+          align-self: flex-start;
+        }
+        p {
+          font-size: 2rem;
+          font-weight: bold;
+          font-family: $font-secondary;
+          line-height: 1.3;
+          span {
+            color: gray;
+            font-weight: 400;
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+    // Contact Form Styling--
+    .contact-form {
+      @include form-style;
+      margin: 50px 20px;
+      @include phoneMedia {
+        width: 100%;
+      }
+    }
+  }
+}

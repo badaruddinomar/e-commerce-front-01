@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.create-product-page {
+  width: 100%;
+  // Banner Styling--
+  .create-product-banner {
+    @include common-banner;
+  }
+  // Container Styling--
+  .create-product-container {
+    width: 100%;
+    padding: 0 2rem;
+    @include flex-col;
+    // Form Styling--
+    .create-product-form {
+      width: 100%;
+      @include form-style;
+      @include flex-col;
+      margin: 100px 20px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.signup-section {
+  width: 100%;
+  margin-bottom: 100px;
+  @include flex-center;
+  .signup-banner {
+    @include common-banner;
+  }
+  .signup-container {
+    width: 100%;
+    padding: 0 2rem;
+    @include flex-col;
+    .signup-form {
+      width: 100%;
+      @include form-style;
+      @include flex-col;
+      margin: 100px 20px;
+      margin-bottom: 0.5rem;
+
+      .image-preview {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        align-self: flex-start;
+      }
+    }
+    .have-account {
+      width: 500px;
+      @include flex-between;
+      @include smallMedia {
+        width: 100%;
+      }
+      p {
+        font-size: 1.6rem;
+        font-family: $font-secondary;
+        margin: 1rem 0;
+        color: $text-dark;
+        padding-bottom: 0.5rem;
+        transition: all 0.23s;
+      }
+      .link {
+        font-size: 1.6rem;
+        font-family: $font-secondary;
+        margin: 1rem 0;
+        color: $text-dark;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid $primary-color;
+        transition: all 0.23s;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

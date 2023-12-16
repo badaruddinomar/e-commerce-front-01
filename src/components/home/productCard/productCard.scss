@@ -1,0 +1,60 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixin.scss";
+.product-card {
+  width: 400px;
+  display: inline-block;
+  height: auto;
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+  box-shadow: $shadow;
+  padding: 2rem;
+  border-radius: 4px;
+  transition: all 0.5s;
+  @include smallMedia {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 4;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .product-name {
+    color: $text-dark;
+    font-family: $font-secondary;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 2rem 0;
+  }
+  .card-content {
+    .product-price {
+      color: $text-dark;
+      font-family: $font-secondary;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      font-weight: bold;
+    }
+    .reviews {
+      @include flex-between;
+
+      .icon {
+        font-size: 1rem;
+      }
+      span {
+        color: $text-dark;
+        font-family: $font-secondary;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.user-role-page {
+  width: 100%;
+  // banner styling--
+  .user-role-banner {
+    @include common-banner;
+  }
+  // container--
+  .user-role-container {
+    width: 100%;
+    padding: 0 2rem;
+    @include flex-col;
+    .user-role-form {
+      width: 100%;
+      @include form-style;
+      @include flex-col;
+      margin: 100px 20px;
+    }
+  }
+}

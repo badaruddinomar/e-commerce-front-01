@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.my-order-page {
+  width: 100%;
+  margin-bottom: 100px;
+  @include flex-center;
+  // banner styling--
+  .my-order-banner {
+    @include common-banner;
+  }
+  // container styling--
+  .my-order-container {
+    width: 100%;
+    padding: 0 2rem;
+    .order-table-container {
+      @include table-container;
+      table {
+        margin: auto;
+      }
+    }
+  }
+}

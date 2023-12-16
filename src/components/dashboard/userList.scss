@@ -1,0 +1,23 @@
+@import "../../styles/mixin.scss";
+@import "../../styles/variables.scss";
+
+.user-list-page {
+  width: 100%;
+  // banner div--
+  .user-list-banner {
+    @include common-banner;
+  }
+  // container--
+  .user-list-container {
+    margin: 100px 0;
+    width: 100%;
+    padding: 0 2rem;
+    .table-container {
+      @include table-container;
+      margin-bottom: 0px;
+      table {
+        margin: auto;
+      }
+    }
+  }
+}

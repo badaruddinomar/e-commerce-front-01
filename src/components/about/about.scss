@@ -1,0 +1,195 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.about-page {
+  width: 100%;
+  overflow-x: hidden;
+  margin-bottom: 100px;
+  @include flex-center;
+  @include phoneMedia {
+    margin-bottom: 50px;
+  }
+  // Banner Div Styling--
+  .about-banner {
+    @include common-banner;
+  }
+
+  // Features Div Styling--
+  .features {
+    width: 100%;
+    margin-top: 100px;
+    @include flex-center;
+    flex-wrap: wrap;
+    @include phoneMedia {
+      margin: 50px 0;
+    }
+
+    .feature {
+      margin: 1rem;
+      box-shadow: $shadow;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 4px;
+      transition: all 0.5s;
+      @include phoneMedia {
+        margin: 1rem 0.5rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        margin: 1.5rem 0;
+        font-family: $font-secondary;
+        color: gray;
+      }
+      &:hover {
+        transform: translateY(5px);
+      }
+    }
+  }
+  // Teammates Div--
+  .teammates {
+    margin: 100px 2rem;
+    width: 100%;
+    height: auto;
+    @include flex-center;
+    @include phoneMedia {
+      margin: 50px 0;
+    }
+    h2 {
+      font-size: 5rem;
+      margin: 3rem 0;
+      font-family: $font-secondary;
+      text-align: center;
+      @include phoneMedia {
+        font-size: 3.5rem;
+      }
+    }
+    .team-member-container {
+      width: 100%;
+      @include flex-center;
+      flex-wrap: wrap;
+      .team-member {
+        width: 300px;
+        margin: 1rem 1rem;
+        @include smallMedia {
+          width: 100%;
+        }
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          border-radius: 4px;
+          margin-bottom: 2rem;
+        }
+        h4 {
+          font-size: 3rem;
+          font-family: $font-secondary;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1.6rem;
+          font-family: $font-primary;
+          margin: 1rem 0;
+          color: gray;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+  // Testimonials Div--
+  .testimonials {
+    width: 100%;
+    padding: 50px 0;
+    @include flex-col;
+
+    h2 {
+      font-size: 5rem;
+      margin: 3rem 0;
+      font-family: $font-secondary;
+      text-align: center;
+    }
+    .slider-container {
+      width: 800px;
+      margin-top: 3rem;
+      position: relative;
+      @include flex-center;
+      @include phoneMedia {
+        width: 100%;
+        padding: 0 2rem;
+      }
+      .slide {
+        @include flex-col;
+        p {
+          font-size: 1.8rem;
+          font-family: $font-primary;
+          color: gray;
+          line-height: 1.6;
+          text-align: center;
+          margin: 1rem 0;
+        }
+        img {
+          object-fit: cover;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          margin: 1rem 0;
+        }
+        .name {
+          font-family: $font-primary;
+          font-size: 1.6rem;
+          font-weight: bold;
+          margin-top: 0.5rem;
+        }
+        .title {
+          font-size: 1.4rem;
+          font-family: $font-primary;
+          font-weight: bold;
+        }
+      }
+      .left-icon {
+        position: absolute;
+        top: 30%;
+        left: 0rem;
+        transform: translateY(-30%);
+        cursor: pointer;
+        background: $primary-color;
+        border-radius: 50%;
+        color: white;
+        width: 40px;
+        height: 40px;
+        transition: all 0.23s;
+        border: none;
+        outline: none;
+        .icon {
+          font-size: 3rem;
+        }
+        &:hover {
+          background: $secondary-color;
+        }
+      }
+      .right-icon {
+        position: absolute;
+        top: 30%;
+        right: 0;
+        transform: translateY(-30%);
+        font-size: 3rem;
+        cursor: pointer;
+        background: $primary-color;
+        border-radius: 50%;
+        color: white;
+        width: 40px;
+        height: 40px;
+        transition: all 0.23s;
+        border: none;
+        outline: none;
+        .icon {
+          font-size: 3rem;
+          margin: 0.5rem 0.4rem;
+        }
+        &:hover {
+          background: $secondary-color;
+        }
+      }
+    }
+  }
+}

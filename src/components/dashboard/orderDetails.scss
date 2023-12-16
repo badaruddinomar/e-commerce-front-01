@@ -1,0 +1,82 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.order-details-page {
+  width: 100%;
+  @include flex-center;
+  // Banner --
+  .order-details-banner {
+    @include common-banner;
+  }
+  // Container--
+  .order-details-container {
+    width: 100%;
+    margin: 100px 0;
+    padding: $section-lr-padding;
+    @include phoneMedia {
+      padding: 0 2rem;
+    }
+    // shipping info styling--
+    .shipping-info {
+      h2 {
+        font-size: 3rem;
+        font-family: $font-secondary;
+        margin: 2rem 0;
+        line-height: 1.5;
+      }
+      .username,
+      .email,
+      .phoneNo,
+      .address {
+        font-size: 2rem;
+        font-family: $font-primary;
+        margin: 0.9rem 0;
+      }
+    }
+    // Order items info styling--
+    .order-items {
+      margin: 30px 0;
+      width: 100%;
+      h2 {
+        font-size: 3rem;
+        font-family: $font-secondary;
+        margin: 2rem 0;
+      }
+      .table-container {
+        @include table-container;
+        margin: 20px 0;
+      }
+    }
+    // Order summery info styling--
+    .order-summery {
+      h2 {
+        font-size: 3rem;
+        font-family: $font-secondary;
+        margin: 3rem 0;
+      }
+      .subtotal,
+      .shipping-charges,
+      .gst,
+      .total-price {
+        font-size: 2rem;
+        margin: 0.8rem 0;
+        font-family: $font-primary;
+        span {
+          font-size: 2.3rem;
+          font-weight: bold;
+        }
+      }
+    }
+    // update order status form Styling--
+    .update-order {
+      h2 {
+        font-size: 3rem;
+        font-family: $font-secondary;
+        margin: 3rem 0;
+      }
+      .update-order-form {
+        @include form-style;
+      }
+    }
+  }
+}

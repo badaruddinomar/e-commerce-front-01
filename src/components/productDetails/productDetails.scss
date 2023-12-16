@@ -1,0 +1,244 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+.product-details-page {
+  width: 100%;
+  margin-bottom: 100px;
+  @include flex-col;
+  // banner--
+  .product-details-banner {
+    @include common-banner;
+  }
+  // product details container--
+  .product-details-container {
+    width: 100%;
+    margin: 100px 0 50px 0;
+    padding: $section-lr-padding;
+    @include flex-between;
+    @include phoneMedia {
+      padding: 0 2rem;
+      @include flex-col;
+    }
+    // container left div--
+    .left-div {
+      width: 50%;
+      margin-right: 2rem;
+      @include phoneMedia {
+        margin-right: 0;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        height: auto;
+
+        // height: 700px;
+        // max-height: 700px;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+    }
+    // container right div--
+    .right-div {
+      justify-self: flex-start;
+      width: 50%;
+      margin-left: 5rem;
+      @include phoneMedia {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 3rem;
+      }
+      .product-name {
+        font-size: 3rem;
+        font-family: $font-secondary;
+        text-transform: capitalize;
+        margin: 1rem 0;
+      }
+      .product-id {
+        font-size: 1.4rem;
+        font-family: $font-primary;
+      }
+      .product-price {
+        font-size: 3rem;
+        font-family: $font-secondary;
+        color: $primary-color;
+        margin: 1.5rem 0;
+      }
+      .product-status {
+        font-size: 1.6rem;
+        font-family: $font-primary;
+        span {
+          color: $secondary-color;
+          margin-right: 0.5rem;
+        }
+        .inStock {
+          color: rgb(76, 223, 76);
+        }
+        .notInStock {
+          color: gray;
+          text-decoration: line-through;
+        }
+      }
+      .product-category {
+        font-size: 1.6rem;
+        margin: 1rem 0;
+        font-family: $font-primary;
+        text-transform: capitalize;
+        span {
+          color: $primary-color;
+        }
+      }
+      .product-description {
+        border-top: 1px solid gray;
+        padding-top: 1rem;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        font-family: $font-primary;
+        margin: 1rem 0;
+        color: gray;
+      }
+      .product-reviews-container {
+        @include flex-row;
+        margin: 1rem 0;
+
+        .product-reviews {
+          font-size: 1.6rem;
+          font-family: $font-primary;
+          margin-left: 1rem;
+          color: gray;
+        }
+      }
+      .quantity-container {
+        input {
+          outline: none;
+          padding: 1rem;
+          width: 60px;
+          margin: 0 1rem;
+          border: 2px solid #eee;
+          font-size: 1.6rem;
+          text-align: center;
+
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          /* Firefox */
+          &[type="number"] {
+            -moz-appearance: textfield;
+          }
+        }
+        button {
+          font-size: 1.6rem;
+          border: none;
+          outline: none;
+          background: linear-gradient($primary-color, $secondary-color);
+          cursor: pointer;
+          color: white;
+          line-height: 0;
+          padding: 2rem;
+          border-radius: 4px;
+          margin: 1rem 0;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+  // add review container--
+  .add-review-container {
+    width: 100%;
+    padding: 50px 10rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    @include phoneMedia {
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+    }
+    .total-review {
+      width: 250px;
+      height: 250px;
+      background: #e8f0f2;
+      border-radius: 4px;
+      margin-top: 10rem;
+      @include flex-col;
+      @include phoneMedia {
+        margin-top: 2rem;
+      }
+      @include smallMedia {
+        width: 100%;
+      }
+      h4 {
+        font-size: 3rem;
+        font-family: $font-primary;
+        margin: 1rem 0;
+      }
+      .total-ratigns {
+        font-size: 5rem;
+        font-family: $font-primary;
+        font-weight: bold;
+        color: $primary-color;
+      }
+      .total-reviews {
+        font-size: 2rem;
+        color: gray;
+        font-family: $font-primary;
+      }
+    }
+    .review-form-container {
+      @include phoneMedia {
+        width: 100%;
+        padding: 0 2rem;
+        @include flex-col;
+      }
+
+      h3 {
+        font-size: 3rem;
+        font-family: $font-primary;
+        text-align: center;
+        margin: 3rem 0;
+      }
+      .rating {
+        font-size: 3rem;
+        transform: translateX(100%);
+        margin: 2rem 0;
+        @include phoneMedia {
+          transform: translateX(0);
+        }
+      }
+
+      form {
+        @include form-style;
+        @include phoneMedia {
+          width: 100%;
+          @include flex-col;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+  .product-review {
+    width: 100%;
+    padding: 2rem 10rem;
+    @include phoneMedia {
+      padding: 2rem;
+    }
+    .reviews {
+      h3 {
+        margin: 2rem 0;
+        font-family: $font-primary;
+        font-size: 3rem;
+      }
+      @include flex-col;
+    }
+  }
+  .noReviews {
+    font-size: 3rem;
+    margin: 3rem 0;
+    font-family: $font-primary;
+    color: $primary-color;
+  }
+}
