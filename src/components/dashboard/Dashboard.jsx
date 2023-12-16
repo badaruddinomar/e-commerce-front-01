@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 // Components--
 import { backendUrl } from "../../helper";
-import AdminSidebar from "./adminSidebar";
+import AdminSidebar from "./AdminSidebar";
 import MetaData from "./../MetaData";
 // Chart Packages --
 import { Doughnut, Line } from "react-chartjs-2";
