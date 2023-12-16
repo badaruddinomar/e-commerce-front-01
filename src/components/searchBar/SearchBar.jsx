@@ -70,10 +70,10 @@ const Search = () => {
                     itemsCountPerPage={data?.resultPerPage}
                     totalItemsCount={data?.productsCount}
                     onChange={setCurrentPageNo}
-                    nextPageText={"Next"}
-                    prevPageText={"Prev"}
-                    firstPageText={"1st"}
-                    lastPageText={"Last"}
+                    nextPageText={">"}
+                    prevPageText={"<"}
+                    firstPageText={"<<"}
+                    lastPageText={">>"}
                     itemClass="page-item"
                     linkClass="page-link"
                     activeClass="pageItemActive"
