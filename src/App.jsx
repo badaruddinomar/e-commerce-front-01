@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./app.scss";
 import Layout from "./components/layout/Layout";
-import WebFont from "webfontloader";
 import Home from "./components/home/Home";
 import ProductDetails from "./components/productDetails/ProductDetails";
 import Products from "./components/products/Products";
@@ -33,13 +31,7 @@ import UpdateUserRole from "./components/dashboard/UpdateUserRole.jsx";
 
 function App() {
   const { user, isAuthenticated } = useSelector((state) => state.userReducer);
-  useEffect(() => {
-    WebFont.load({
-      google: {
-        families: ["Roboto", "sans-serif"],
-      },
-    });
-  }, []);
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
