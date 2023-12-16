@@ -12,6 +12,7 @@
   // container styling--
   .search-container {
     width: 100%;
+    padding: 0 2rem;
     @include flex-col;
     .search-box {
       margin: 50px 0;
@@ -23,7 +24,6 @@
       background: white;
       @include phoneMedia {
         width: 100%;
-        padding: 0 2rem;
       }
       input {
         flex: 1;
