@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 // Menubar--
-import MenuBar from "./Menubar";
+import MenuBar from "./MenuBar";
 import "./navbar.scss";
 import { useRef, useState } from "react";
 import { useSelector } from "react-redux";
