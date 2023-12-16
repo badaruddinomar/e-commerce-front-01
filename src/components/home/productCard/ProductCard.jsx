@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 // Components--
 import ReactStars from "react-rating-stars-component";
-import LazyLoad from "react-lazyload";
 import { Link } from "react-router-dom";
 // Style file--
 import "./productCard.scss";
@@ -21,9 +20,7 @@ const Product = ({ product }) => {
   return (
     <>
       <Link className="product-card" to={`/product/${product._id}`}>
-        <LazyLoad height={200} offset={100}>
-          <img className="product-img" src={product.images[0].url} />
-        </LazyLoad>
+        <img className="product-img" src={product.images[0].url} />
         <p className="product-name">{product.name}</p>
         <div className="card-content">
           <span className="product-price">${product?.price}</span>
