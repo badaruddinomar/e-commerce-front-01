@@ -116,7 +116,7 @@ const GetSingleOrder = () => {
           <div className="order-summery">
             <h3>Order Summery</h3>
             <p>
-              <b>Subtotal:</b>
+              <b>Subtotal: </b>
               <span>{orderData?.itemsPrice}</span>
             </p>
             <p>
