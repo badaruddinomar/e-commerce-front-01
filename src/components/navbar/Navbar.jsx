@@ -71,7 +71,10 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="nav-right">
-            <Link to={isAuthenticated ? "/profile" : "/login"} className="link">
+            <Link
+              to={!isAuthenticated ? "/login" : "/profile"}
+              className="link"
+            >
               <PersonIcon className="icon" />
             </Link>
             <Link to="/cart" className="link">
