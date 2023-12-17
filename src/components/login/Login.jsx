@@ -26,8 +26,8 @@ const Login = () => {
   const { errorMsg } = useSelector((state) => state.toastReducer);
   const { loading } = useSelector((state) => state.userReducer);
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("admin@gmail.com");
+  const [password, setPassword] = useState("admin1234");
   const dispatch = useDispatch();
 
   const emailChangeHandler = (e) => {
