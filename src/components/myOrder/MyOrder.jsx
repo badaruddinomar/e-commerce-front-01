@@ -29,7 +29,7 @@ const MyOrder = () => {
     const fetchHandler = async () => {
       try {
         dispatch(getMyOrderRequest());
-        const response = await fetch(`${backendUrl}/api/v1//orders/me`, {
+        const response = await fetch(`${backendUrl}/api/v1/orders/me`, {
           method: "GET",
           credentials: "include",
         });
