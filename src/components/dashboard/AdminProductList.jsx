@@ -46,13 +46,10 @@ const AdminProductList = () => {
   const productDeleteHandler = async (id) => {
     try {
       setLoading(true);
-      const response = await fetch(
-        `${backendUrl}/api/v1//admin/product/${id}`,
-        {
-          method: "DELETE",
-          credentials: "include",
-        }
-      );
+      const response = await fetch(`${backendUrl}/api/v1/admin/product/${id}`, {
+        method: "DELETE",
+        credentials: "include",
+      });
       const data = await response.json();
       if (response.ok) {
         dispatch(successMessage(data.message));
