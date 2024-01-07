@@ -13,11 +13,15 @@ import { useEffect } from "react";
 // Store data to the redux--
 import { allProductSuccess } from "../../reducers/products/productsReducer";
 import { getAllProducts } from "../../actions/productActions/productActions";
+import {
+  signoutSuccess,
+} from "../../reducers/user/userReducer";
 // Images--
 import bannerShow from "../../img/banner/banner-img.png";
 // MUI Icons--
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { features, brands } from "../data/data";
+import { backendUrl } from "../../helper";
 const Home = () => {
   // All variables are here--
   const { products } = useSelector((state) => state.productReducer);
@@ -39,6 +43,17 @@ const Home = () => {
     );
   }, [dispatch, data]);
 
+  useEffect(() => {
+    const fetchHandler = async () => {
+      const response = await fetch(`${backendUrl}/api/v1/me`, {
+        credentials: "include",
+      });
+      if (!response.ok) {
+        dispatch(signoutSuccess());
+      } 
+    };
+    fetchHandler();
+  }, [dispatch]);
   return (
     <>
       <Helmet title="Shop-Cart" />
